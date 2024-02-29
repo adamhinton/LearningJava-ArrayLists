@@ -27,9 +27,11 @@ public class Main {
 
 
         // Generics FTW
-        ArrayList<GroceryItem> objectList = new ArrayList<GroceryItem>();
-        objectList.add(new GroceryItem("Butter"));
-        objectList.add("Yogurt");
+        // ALs are resizable, don't need to spec size
+        ArrayList<GroceryItem> groceryList = new ArrayList<>();
+        groceryList.add(new GroceryItem("Butter"));
+        groceryList.add(new GroceryItem("Yogurt"));
+
 
     }
 }

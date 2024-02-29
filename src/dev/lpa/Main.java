@@ -6,7 +6,7 @@ package dev.lpa;
 // More flexible than Array
 // Its capacity grows as elements are added; that's all handled BTS
 
-import java.util.Arrays;
+import java.util.ArrayList;
 
 record GroceryItem (String name, String type, int count){
     public GroceryItem(String name){
@@ -17,11 +17,19 @@ record GroceryItem (String name, String type, int count){
 public class Main {
     public static void main(String[] args) {
 
-        GroceryItem[] groceryArray = new GroceryItem[2];
-        groceryArray[0] = new GroceryItem("milk");
-        groceryArray[1] = new GroceryItem("apples", "PRODUCE", 6);
-        groceryArray[2] = "5 oranges";
-        System.out.println(Arrays.toString(groceryArray));
+//        GroceryItem[] groceryArray = new GroceryItem[3];
+//        groceryArray[0] = new GroceryItem("milk");
+//        groceryArray[1] = new GroceryItem("apples", "PRODUCE", 6);
+//        groceryArray[2] = new GroceryItem("oranges", "PRODUCE", 5);
+//        System.out.println(Arrays.toString(groceryArray));
+
+
+
+
+        // Generics FTW
+        ArrayList<GroceryItem> objectList = new ArrayList<GroceryItem>();
+        objectList.add(new GroceryItem("Butter"));
+        objectList.add("Yogurt");
 
     }
 }
